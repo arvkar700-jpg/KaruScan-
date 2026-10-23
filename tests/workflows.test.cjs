@@ -6,7 +6,7 @@ const html=fs.readFileSync('index.html','utf8');
 function boot(options={}) {
   const errors=[];
   const virtualConsole=new VirtualConsole();virtualConsole.on('jsdomError',e=>errors.push(e.message));
-  const dom=new JSDOM(html,{url:'https://karuscan.test/',runScripts:'dangerously',virtualConsole,beforeParse(w){
+  const dom=new JSDOM(html,{url:'https://katim.test/',runScripts:'dangerously',virtualConsole,beforeParse(w){
     w.confirm=()=>false;
     Object.defineProperty(w.navigator,'clipboard',{value:{writeText:async()=>{throw Error('Clipboard blocked')}}});
     if(options.saved) w.localStorage.setItem('karuscan.v1',JSON.stringify(options.saved));

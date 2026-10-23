@@ -1,4 +1,4 @@
-name: KaruScan regression tests
+name: Katim regression tests
 on: [push, pull_request]
 permissions:
   contents: read

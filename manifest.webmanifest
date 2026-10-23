@@ -1,6 +1,6 @@
 {
-  "name": "KaruScan",
-  "short_name": "KaruScan",
+  "name": "Katim",
+  "short_name": "Katim",
   "description": "Find the AI and app subscriptions charging your card, and stop the ones you don't use.",
   "start_url": "./",
   "scope": "./",

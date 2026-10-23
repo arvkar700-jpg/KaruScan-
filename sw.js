@@ -1,5 +1,5 @@
-// KaruScan offline support. Bump VERSION when publishing changes.
-const VERSION = 'karuscan-v2';
+// Katim offline support. Bump VERSION when publishing changes.
+const VERSION = 'katim-v1';
 const SHELL = [
   './', './index.html', './privacy.html', './manifest.webmanifest',
   './icons/icon.svg', './icons/icon-32.png', './icons/icon-180.png',

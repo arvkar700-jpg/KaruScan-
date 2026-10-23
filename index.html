@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>KaruScan</title>
+<title>Katim</title>
 <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
@@ -12,7 +12,7 @@
 <meta name="description" content="Find the AI and app subscriptions charging your card, and stop the ones you don't use. Your statement never leaves your device.">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="KaruScan">
+<meta name="apple-mobile-web-app-title" content="Katim">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>
 /* Layout: one working column (max 1080px). Summary strip → import → review list → how-to. Rows, not cards. */
@@ -88,6 +88,7 @@ header.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-cont
 .brand-row img { width: clamp(44px, 9vw, 60px); height: auto; flex: none; border-radius: 22%; }
 .wordmark { font-size: clamp(2.1rem, 6vw, 3.1rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
 .wordmark span { color: var(--accent); }
+.meaning { font-size: 0.85rem; color: var(--muted); font-style: italic; }
 .tagline { font-size: 1.05rem; color: var(--muted); max-width: 52ch; }
 .privacy { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; background: var(--ok-soft); color: var(--ok); padding: 6px 12px; border-radius: 999px; font-weight: 500; }
 .privacy svg { flex: none; }
@@ -201,8 +202,9 @@ fieldset { min-width: 0; width: 100%; overflow-wrap: anywhere; }
 
   <header class="top">
     <div class="brand">
-      <div class="brand-row"><img src="icons/icon.svg" alt="" width="60" height="60"><div class="wordmark" aria-label="KaruScan">Karu<span>Scan</span></div></div>
-      <p class="tagline">Find the AI tools and app subscriptions quietly charging your card, see which ones you don't use, and stop them.</p>
+      <div class="brand-row"><img src="icons/icon.svg" alt="" width="60" height="60"><div class="wordmark">Kat<span>im</span></div></div>
+      <p class="tagline">Cut the subscriptions you don't use. Katim finds the AI tools and apps charging your card and helps you stop the ones you don't need.</p>
+      <p class="meaning">Katim is Tok Pisin for “cut it”.</p>
     </div>
     <div class="privacy" title="Statements are read inside your browser. Nothing is uploaded.">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
@@ -211,7 +213,7 @@ fieldset { min-width: 0; width: 100%; overflow-wrap: anywhere; }
   </header>
 
   <div id="banner" class="banner" hidden>
-    <p><strong>Example statement loaded.</strong> These charges are made up to show how KaruScan works. Add your own statement below to replace them.</p>
+    <p><strong>Example statement loaded.</strong> These charges are made up to show how Katim works. Add your own statement below to replace them.</p>
     <button type="button" id="clearExample">Clear example</button>
   </div>
 
@@ -253,7 +255,7 @@ fieldset { min-width: 0; width: 100%; overflow-wrap: anywhere; }
   <section id="review">
     <div class="sec-head">
       <h2><span class="n">2</span>Review each subscription</h2>
-      <p class="muted small">Tell KaruScan when you last used each one. Review candidates before deciding what to keep, cancel or investigate.</p>
+      <p class="muted small">Tell Katim when you last used each one. Review candidates before deciding what to keep, cancel or investigate.</p>
     </div>
     <div class="filters" id="filters" role="group" aria-label="Filter subscriptions"></div>
     <div class="list" id="list"></div>
@@ -264,15 +266,15 @@ fieldset { min-width: 0; width: 100%; overflow-wrap: anywhere; }
     <div class="about">
       <div>
         <h3>Cancel at the source</h3>
-        <p>Open “How to cancel” on any row. KaruScan links to that company's billing page and lists the steps. Cancelling there stops the next charge. Bank blocks alone often don't, because companies can re-bill a new card.</p>
+        <p>Open “How to cancel” on any row. Katim links to that company's billing page and lists the steps. Cancelling there stops the next charge. Bank blocks alone often don't, because companies can re-bill a new card.</p>
       </div>
       <div>
         <h3>Dispute what you don't recognise</h3>
-        <p>Mark a charge “I don't recognise this” and KaruScan writes a dispute letter for your bank's card services team, asking them to reverse the charges, block the merchant and advise on replacing your card.</p>
+        <p>Mark a charge “I don't recognise this” and Katim writes a dispute letter for your bank's card services team, asking them to reverse the charges, block the merchant and advise on replacing your card.</p>
       </div>
       <div>
         <h3>Check the next statement</h3>
-        <p>After you mark something cancelled, add next month's statement. If the same company charges you again, KaruScan flags it in red so you can claim a refund.</p>
+        <p>After you mark something cancelled, add next month's statement. If the same company charges you again, Katim flags it in red so you can claim a refund.</p>
       </div>
     </div>
     <details class="tools">
@@ -292,21 +294,21 @@ fieldset { min-width: 0; width: 100%; overflow-wrap: anywhere; }
         </div>
         <textarea id="ioBox" class="copybox" spellcheck="false" hidden></textarea>
         <p id="ioMsg" class="note" hidden></p>
-        <p class="note">KaruScan stores all imported payments and decisions unencrypted in this browser. Anyone with access to this browser profile, or scripts on the same website origin, may read them. Backups and copied text contain financial data. Storage can be cleared by the browser; export a backup before relying on saved decisions. Use “Copy backup” and keep the text somewhere safe if you want to move to another device.</p>
+        <p class="note">Katim stores all imported payments and decisions unencrypted in this browser. Anyone with access to this browser profile, or scripts on the same website origin, may read them. Backups and copied text contain financial data. Storage can be cleared by the browser; export a backup before relying on saved decisions. Use “Copy backup” and keep the text somewhere safe if you want to move to another device.</p>
       </div>
     </details>
   </section>
 
   <div class="install" id="install">
     <div class="txt">
-      <h3>Install KaruScan on your phone or tablet</h3>
-      <p id="installHow">iPhone or iPad: open this page in Safari, tap Share, then “Add to Home Screen”. Android: open it in Chrome, tap the ⋮ menu, then “Install app”. KaruScan then opens from its own icon and works without internet.</p>
+      <h3>Install Katim on your phone or tablet</h3>
+      <p id="installHow">iPhone or iPad: open this page in Safari, tap Share, then “Add to Home Screen”. Android: open it in Chrome, tap the ⋮ menu, then “Install app”. Katim then opens from its own icon and works without internet.</p>
     </div>
-    <button type="button" class="primary" id="installBtn" hidden>Install KaruScan</button>
+    <button type="button" class="primary" id="installBtn" hidden>Install Katim</button>
   </div>
 
   <footer>
-    KaruScan cannot sign in to your bank or your app accounts, so the final “Cancel” click is always yours. It reads your statement in this browser, finds the subscriptions, tells you which to stop, takes you to the right page, and drafts the emails. Billing pages change from time to time. If a link has moved, open the company's site and look under Settings → Billing or Subscription. <a href="privacy.html">Privacy policy</a>.
+    Katim cannot sign in to your bank or your app accounts, so the final “Cancel” click is always yours. It reads your statement in this browser, finds the subscriptions, tells you which to stop, takes you to the right page, and drafts the emails. Billing pages change from time to time. If a link has moved, open the company's site and look under Settings → Billing or Subscription. <a href="privacy.html">Privacy policy</a>.
   </footer>
 </div>
 
@@ -416,7 +418,7 @@ const REC = {
 };
 
 /* ---------- State ---------- */
-const STORE_KEY = 'karuscan.v1';
+const STORE_KEY = 'karuscan.v1'; // Kept from the app's earlier name so saved data survives the rename.
 let S = { txns: [], meta: {}, settings: { cur: 'K', order: 'dmy' }, example: false };
 let filter = 'all';
 let pendingImport = null;
@@ -853,7 +855,7 @@ function render() {
   const unknown = subs.filter(s => s.rec === 'dispute');
   if (unknown.length) ins.push(['warn', `${unknown.length} candidate${unknown.length > 1 ? 's' : ''} you don't recognise: ${unknown.map(s => `<strong>${esc(s.name)}</strong>`).join(', ')}. Check receipts and shared accounts, then select relevant payments for a bank investigation if still unclear.`]);
   const unidentified = subs.filter(s => !s.cat && !s.usage && s.status !== 'cancelled');
-  if (unidentified.length) ins.push(['warn', `${unidentified.length} repeating charge${unidentified.length > 1 ? 's' : ''} KaruScan doesn't know by name (${unidentified.map(s => esc(s.name)).join(', ')}). If you don't recognise ${unidentified.length > 1 ? 'them' : 'it'}, choose “I don't recognise this charge”.`]);
+  if (unidentified.length) ins.push(['warn', `${unidentified.length} repeating charge${unidentified.length > 1 ? 's' : ''} Katim doesn't know by name (${unidentified.map(s => esc(s.name)).join(', ')}). If you don't recognise ${unidentified.length > 1 ? 'them' : 'it'}, choose “I don't recognise this charge”.`]);
   const byCat = {};
   for (const s of active) if (s.cat && !s.cat.via) (byCat[s.category] = byCat[s.category] || []).push(s);
   for (const [cat, list] of Object.entries(byCat)) {
@@ -946,7 +948,7 @@ function rowHtml(s) {
                <button type="button" data-act="cancelled">Mark as cancelled</button>
                ${s.status === 'keep' ? `<button type="button" data-act="undo">Stop keeping</button>` : `<button type="button" data-act="keep">Keep it</button>`}`}
         </div>
-        <p class="note">After cancelling, add next month's statement. KaruScan flags any charge after the cancel date.</p>
+        <p class="note">After cancelling, add next month's statement. Katim flags any charge after the cancel date.</p>
       </div>
       <div class="col">
         <span class="label">Recent charges</span>
@@ -1066,7 +1068,7 @@ $('restoreBackup').addEventListener('click', () => {
     if (S.txns.length && !confirm('Replace current payments and decisions with this validated backup?')) return;
     S = restored; openRows.clear(); pendingImport=null; $('preview').hidden=true; $('previewRows').textContent='';
     migrateDecisions(); save(); syncSettings(); render(); io.value=''; ioMsg.textContent = storageError ? 'Restored in memory only. Storage failed; retain your backup.' : `Restored ${S.txns.length} payments.`;
-  } catch (e) { ioMsg.textContent = 'That text isn\'t a KaruScan backup. Copy the whole backup and try again.'; }
+  } catch (e) { ioMsg.textContent = 'That text isn\'t a Katim backup. Copy the whole backup and try again.'; }
   restoring = false;
 });
 let eraseArmed = false;
@@ -1122,7 +1124,7 @@ if (standalone) $('install').hidden = true;
 let installEvent = null;
 window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault(); installEvent = e; $('installBtn').hidden = false;
-  $('installHow').textContent = 'Add KaruScan to your home screen. It opens from its own icon and works without internet.';
+  $('installHow').textContent = 'Add Katim to your home screen. It opens from its own icon and works without internet.';
 });
 $('installBtn').addEventListener('click', async () => {
   if (!installEvent) return;
