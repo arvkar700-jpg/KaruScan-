@@ -4,7 +4,7 @@ KaruScan finds the AI tools and app subscriptions charging your bank card, shows
 
 **Use it:** https://arvkar700-jpg.github.io/KaruScan-/
 
-Your statement is read inside your own browser and never uploaded. There is no account, no tracking and no server. See the [privacy policy](privacy.html).
+Your statement is read inside your own browser and never uploaded. There is no account, no tracking and no server. Saved payments are kept unencrypted in that browser, so use KaruScan on a device only you use. See the [privacy policy](privacy.html).
 
 ## Install it on your phone or tablet
 
@@ -31,7 +31,10 @@ KaruScan can't sign in to your bank or app accounts, so the final "Cancel" click
 | `sw.js` | Saves the app on the device so it works offline |
 | `privacy.html` | Privacy policy |
 | `icons/` | App icon in Papua New Guinea flag colours (`icon-teal.svg` is the alternative design) |
+| `tests/` | Automated checks of statement reading, estimates, backups and letters |
 
 ## Publishing an update
 
-Edit the files, then change `VERSION` at the top of `sw.js` (for example `karuscan-v2`) so installed copies pick up the change.
+1. Edit the files.
+2. Run the checks: `npm ci` once, then `npm test`. They also run on GitHub after every push.
+3. Change `VERSION` at the top of `sw.js` (for example `karuscan-v3`) so installed copies pick up the change.

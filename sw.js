@@ -1,5 +1,5 @@
 // KaruScan offline support. Bump VERSION when publishing changes.
-const VERSION = 'karuscan-v1';
+const VERSION = 'karuscan-v2';
 const SHELL = [
   './', './index.html', './privacy.html', './manifest.webmanifest',
   './icons/icon.svg', './icons/icon-32.png', './icons/icon-180.png',
@@ -34,15 +34,13 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Own files and Google Fonts: use the saved copy, refresh it in the background.
-  const sameOrigin = url.origin === self.location.origin;
-  const fonts = url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com';
-  if (!sameOrigin && !fonts) return;
+  // Own files: use the saved copy, refresh it in the background.
+  if (url.origin !== self.location.origin) return;
   event.respondWith(
     caches.open(VERSION).then(cache =>
       cache.match(req).then(hit => {
         const fresh = fetch(req).then(res => {
-          if (res && (res.ok || res.type === 'opaque')) cache.put(req, res.clone());
+          if (res && res.ok) cache.put(req, res.clone());
           return res;
         }).catch(() => hit);
         return hit || fresh;
